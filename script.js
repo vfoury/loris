@@ -1,35 +1,35 @@
-const enigmes = [
+const puzzles = [
     {
-        question: "what is the day of our first meeting bubble :) (ex: 14 february 2024)?",
-        reponse: "18 July 2024"
+        question: "What is our anniversary date?",
+        answer: "February 14"
     },
     {
-        question: "what is the next destination we both want to go for holidays ?",
-        reponse: "Jeju"
+        question: "What is the name of our favorite restaurant?",
+        answer: "The Gourmet"
     },
     {
-        question: "hoy do you say 'I love you' in french ?",
-        reponse: "Je t'aime"
+        question: "Where did we spend our first vacation together?",
+        answer: "Paris"
     }
 ];
 
-let currentEnigmeIndex = 0;
+let currentPuzzleIndex = 0;
 
-function verifierReponse() {
+function checkAnswer() {
     const response = document.getElementById('response').value.trim().toLowerCase();
     const messageElement = document.getElementById('message');
 
-    if (response === enigmes[currentEnigmeIndex].reponse.toLowerCase()) {
-        messageElement.textContent = "WoW you rememberd bubble :D ";
-        currentEnigmeIndex++;
-        if (currentEnigmeIndex < enigmes.length) {
-            document.getElementById('enigme-text').textContent = enigmes[currentEnigmeIndex].question;
+    if (response === puzzles[currentPuzzleIndex].answer.toLowerCase()) {
+        messageElement.textContent = "Correct! Let's move to the next puzzle.";
+        currentPuzzleIndex++;
+        if (currentPuzzleIndex < puzzles.length) {
+            document.getElementById('puzzle-text').textContent = puzzles[currentPuzzleIndex].question;
             document.getElementById('response').value = '';
         } else {
-            messageElement.textContent = "Wow you made it all Bubble ! I am proud of you.. I love you !!";
-            document.getElementById('enigme-container').innerHTML = '<p>Vous avez terminé toutes les énigmes !</p>';
+            messageElement.textContent = "Congratulations! You solved all the puzzles.";
+            document.getElementById('puzzle-container').innerHTML = '<p>You completed all the puzzles!</p>';
         }
     } else {
-        messageElement.textContent = "Wrong answer Bubble.. Try again :) !";
+        messageElement.textContent = "Try again!";
     }
 }

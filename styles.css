@@ -1,4 +1,4 @@
-/* Corps de la page */
+/* Body of the page */
 body {
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(135deg, #fbc2eb 10%, #a18cd1 100%);
@@ -7,13 +7,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Empêcher le défilement */
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* Conteneur principal */
+/* Main container */
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.9); /* Blanc semi-transparent */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -22,42 +22,42 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Animation de fondu */
+/* Fade-in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* En-tête */
+/* Header */
 h1 {
-    color: #4a47a3; /* Bleu violet */
+    color: #4a47a3; /* Dark blue-violet */
     margin-bottom: 20px;
     font-weight: 600;
 }
 
-/* Entrée de texte */
+/* Text input */
 input {
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #4a47a3; /* Bleu violet */
+    border: 2px solid #4a47a3; /* Dark blue-violet */
     border-radius: 5px;
-    width: calc(100% - 24px); /* Largeur ajustée */
+    width: calc(100% - 24px); /* Adjusted width */
     transition: border-color 0.3s ease;
 }
 
 input:focus {
-    border-color: #6a67ce; /* Violet clair */
+    border-color: #6a67ce; /* Light violet */
     outline: none;
 }
 
-/* Bouton de vérification */
+/* Check button */
 button {
     padding: 10px 20px;
     font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
-    background-color: #4a47a3; /* Bleu violet */
+    background-color: #4a47a3; /* Dark blue-violet */
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,37 +65,37 @@ button {
 }
 
 button:hover {
-    background-color: #6a67ce; /* Violet clair */
+    background-color: #6a67ce; /* Light violet */
     transform: scale(1.05);
 }
 
-/* Message de réponse */
+/* Response message */
 #message {
     margin-top: 20px;
     font-size: 18px;
     color: green;
 }
 
-/* Container d'énigme */
-#enigme-container {
+/* Puzzle container */
+#puzzle-container {
     margin-top: 20px;
 }
 
-/* Texte de l'énigme */
-#enigme-text {
+/* Puzzle text */
+#puzzle-text {
     font-size: 20px;
-    color: #333333; /* Gris foncé */
+    color: #333333; /* Dark gray */
 }
 
-/* Décoration */
+/* Decoration */
 .decoration {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Empêcher les interactions avec les images */
-    overflow: hidden; /* Empêcher le défilement */
+    pointer-events: none; /* Prevent interactions with images */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .deco-image {
@@ -106,26 +106,26 @@ button:hover {
 
 .deco-image:nth-child(1) {
     top: 10%;
-    left: 20%;
-    width: 150px;
+    left: 10%;
+    width: 50px;
     height: auto;
 }
 
 .deco-image:nth-child(2) {
     top: 30%;
-    right: 10%;
-    width: 150px;
+    right: 20%;
+    width: 50px;
     height: auto;
 }
 
 .deco-image:nth-child(3) {
-    bottom: 15%;
+    bottom: 25%;
     left: 10%;
-    width: 170px;
+    width: 50px;
     height: auto;
 }
 
-/* Animation de flottement */
+/* Floating animation */
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
