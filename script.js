@@ -1,15 +1,15 @@
 const enigmes = [
     {
-        question: "Quelle est notre date anniversaire ?",
-        reponse: "17 Juillet"
+        question: "what is the day of our first meeting bubble :) (ex: 14 february 2024)?",
+        reponse: "18 July 2024"
     },
     {
-        question: "Quel est le nom de notre restaurant préféré ?",
-        reponse: "Le Gourmet"
+        question: "what is the next destination we both want to go for holidays ?",
+        reponse: "Jeju"
     },
     {
-        question: "Où avons-nous passé notre première vacance ensemble ?",
-        reponse: "Paris"
+        question: "hoy do you say 'I love you' in french ?",
+        reponse: "Je t'aime"
     }
 ];
 
@@ -20,16 +20,16 @@ function verifierReponse() {
     const messageElement = document.getElementById('message');
 
     if (response === enigmes[currentEnigmeIndex].reponse.toLowerCase()) {
-        messageElement.textContent = "Correct ! Passons à l'énigme suivante.";
+        messageElement.textContent = "WoW you rememberd bubble :D ";
         currentEnigmeIndex++;
         if (currentEnigmeIndex < enigmes.length) {
             document.getElementById('enigme-text').textContent = enigmes[currentEnigmeIndex].question;
             document.getElementById('response').value = '';
         } else {
-            messageElement.textContent = "Félicitations ! Vous avez résolu toutes les énigmes.";
+            messageElement.textContent = "Wow you made it all Bubble ! I am proud of you.. I love you !!";
             document.getElementById('enigme-container').innerHTML = '<p>Vous avez terminé toutes les énigmes !</p>';
         }
     } else {
-        messageElement.textContent = "Essayez encore !";
+        messageElement.textContent = "Wrong answer Bubble.. Try again :) !";
     }
 }
