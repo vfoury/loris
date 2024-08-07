@@ -87,6 +87,17 @@ button:hover {
     color: #333333; /* Dark gray */
 }
 
+/* Love message */
+#love-message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff69b4; /* Hot pink */
+}
+
+.hidden {
+    display: none;
+}
+
 /* Decoration */
 .decoration {
     position: absolute;
@@ -100,8 +111,9 @@ button:hover {
 
 .deco-image {
     position: absolute;
-    animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite, spin 12s linear infinite;
     opacity: 0.8;
+    transition: transform 0.3s ease;
 }
 
 .deco-image:nth-child(1) {
@@ -113,14 +125,14 @@ button:hover {
 
 .deco-image:nth-child(2) {
     top: 30%;
-    right: 15%;
+    right: 10%;
     width: 150px;
     height: auto;
 }
 
 .deco-image:nth-child(3) {
-    bottom: 25%;
-    left: 10%;
+    bottom: 15%;
+    left: 15%;
     width: 150px;
     height: auto;
 }
@@ -130,4 +142,15 @@ button:hover {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
+}
+
+/* Spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Interactivity: Grow on hover */
+.deco-image:hover {
+    transform: scale(1.5);
 }

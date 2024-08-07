@@ -18,6 +18,7 @@ let currentPuzzleIndex = 0;
 function checkAnswer() {
     const response = document.getElementById('response').value.trim().toLowerCase();
     const messageElement = document.getElementById('message');
+    const loveMessageElement = document.getElementById('love-message');
 
     if (response === puzzles[currentPuzzleIndex].answer.toLowerCase()) {
         messageElement.textContent = "Correct Bubble !! :D sooo clever hehe !";
@@ -28,6 +29,7 @@ function checkAnswer() {
         } else {
             messageElement.textContent = "Congratulations! You made everythind wow so proud of you :D Now You can come and kiss me!!";
             document.getElementById('puzzle-container').innerHTML = '<p>You completed all the puzzles!</p>';
+            loveMessageElement.classList.remove('hidden');
         }
     } else {
         messageElement.textContent = "Try again bubble :)";
