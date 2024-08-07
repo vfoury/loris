@@ -1,15 +1,15 @@
 const puzzles = [
     {
-        question: "What is our anniversary date?",
-        answer: "February 14"
+        question: "What is the day of our first meeting bubble ? :) (ex: 14 february 2024)",
+        answer: "18 July 2024"
     },
     {
-        question: "What is the name of our favorite restaurant?",
-        answer: "The Gourmet"
+        question: "Hoy do you say 'I love you' in french bubble :) ?",
+        answer: "Je t'aime"
     },
     {
-        question: "Where did we spend our first vacation together?",
-        answer: "Paris"
+        question: "Where will I take you for our next vacations :) ?",
+        answer: "Jeju"
     }
 ];
 
@@ -20,16 +20,16 @@ function checkAnswer() {
     const messageElement = document.getElementById('message');
 
     if (response === puzzles[currentPuzzleIndex].answer.toLowerCase()) {
-        messageElement.textContent = "Correct! Let's move to the next puzzle.";
+        messageElement.textContent = "Correct Bubble !! :D sooo clever hehe !";
         currentPuzzleIndex++;
         if (currentPuzzleIndex < puzzles.length) {
             document.getElementById('puzzle-text').textContent = puzzles[currentPuzzleIndex].question;
             document.getElementById('response').value = '';
         } else {
-            messageElement.textContent = "Congratulations! You solved all the puzzles.";
+            messageElement.textContent = "Congratulations! You made everythind wow so proud of you :D Now You can come and kiss me!!";
             document.getElementById('puzzle-container').innerHTML = '<p>You completed all the puzzles!</p>';
         }
     } else {
-        messageElement.textContent = "Try again!";
+        messageElement.textContent = "Try again bubble :)";
     }
 }
